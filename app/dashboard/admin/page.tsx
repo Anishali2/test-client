@@ -44,7 +44,7 @@ const UserDashboard = () => {
 
   return (
     <div className="flex flex-col gap-4">
-      <div className="flex w-full flex-col gap-5 lg:gap-14">
+      <div className="flex w-full flex-col gap-5 lg:gap-1">
         {pathname === AdminAppRoutes.dashboard.index && (
           <div className="flex flex-col gap-1  pt-8 sm:pt-0">
             <h4 className="text-gradient font-kanit text-xl lg:text-2xl">

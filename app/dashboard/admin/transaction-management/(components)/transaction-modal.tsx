@@ -151,10 +151,10 @@ export default function TransactionModal({
 
       case 'Transaction History':
         return (
-          <div className="bg-[#0E1F30] p-4 rounded-lg mt-2">
+          <div className="bg-[#152D44] p-4 rounded-lg mt-2">
             <table className="w-full">
               <thead>
-                <tr className="text-gray-400 text-xs border-b border-gray-700">
+                <tr className="text-gray-400 text-xs border-b border-[#0E1F30]">
                   <th className="py-2 text-left">Date of Action</th>
                   <th className="py-2 text-left">IP and Location</th>
                   <th className="py-2 text-left">Admin Actions</th>
@@ -163,7 +163,7 @@ export default function TransactionModal({
               </thead>
               <tbody className="text-white text-xs">
                 {[...Array(5)].map((_, index) => (
-                  <tr key={index} className="border-b border-gray-700">
+                  <tr key={index} className="">
                     <td className="py-3">
                       <p>12 JAN 2024</p>
                       <p className="text-gray-400 text-xs">:: Lorem Ipsum</p>
@@ -178,7 +178,7 @@ export default function TransactionModal({
                 ))}
               </tbody>
             </table>
-            <div className="flex justify-end items-center mt-4">
+            <div className="flex justify-end items-center mt-4 border-t border-[#0E1F30] pt-4">
               <button className="rounded-full p-1 mr-1">
                 <CircleChevronLeft size={20} />
               </button>
@@ -196,18 +196,18 @@ export default function TransactionModal({
 
       case 'Transaction Status':
         return (
-          <div className="bg-[#0E1F30] p-4 rounded-lg mt-2">
+          <div className=" p-4 rounded-lg mt-2">
             <div className="grid grid-cols-2 gap-4 mb-6">
-              <div className="bg-[#081624] p-4 rounded-lg">
+              <div className="bg-[#152D44] p-4 rounded-lg">
                 <p className="text-[#00A3FF] text-xs mb-1">Real-time view of the current transaction status</p>
                 <p className="text-green-500 text-sm">Completed</p>
               </div>
-              <div className="bg-[#081624] p-4 rounded-lg">
+              <div className="bg-[#152D44] p-4 rounded-lg">
                 <p className="text-[#00A3FF] text-xs mb-1">Pending Duration</p>
                 <p className="text-white text-sm">--</p>
               </div>
             </div>
-            <div className="bg-[#081624] p-4 rounded-lg">
+            <div className="bg-[#152D44] p-4 rounded-lg">
               <p className="text-[#00A3FF] text-xs mb-1">Error message</p>
               <p className="text-white text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             </div>

@@ -1,3 +1,4 @@
+
 export { default as Logo } from "./logo.svg";
 export { default as SidebarCurve } from "./sidebar-curve.svg";
 export { default as Dashboard } from "./dashboard.svg";
@@ -54,4 +55,10 @@ export { default as LockIcon } from "./lock.svg";
 export { default as GradientCancelIcon } from "./gradient-cancel.svg";
 export { default as GradientCheckIcon } from "./gradient-check.svg";
 export { default as RentalMinersIcon } from "./rental-miners.svg";
+export { default as UserManagementIcon } from "./user-management-icon.svg";
+export { default as FailTransactionIcon } from "./fail-transaction-icon.svg";
+export { default as AlertTransactionIcon } from "./alert-transaction-icon.svg";
+export { default as CrosActionIcon } from "./cros-action.svg";
+export { default as CheckActionIcon } from "./check-action.svg";
+
 export { default as LeafIcon } from "./leaf.svg";

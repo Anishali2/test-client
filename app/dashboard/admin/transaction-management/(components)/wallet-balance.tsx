@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { AlertTriangle, Bell, CircleArrowRight, CircleChevronRight } from 'lucide-react';
+import { AlertTransactionIcon, FailTransactionIcon } from '@/assets/svgs';
 
 const WalletBalance = () => {
     const [activeTab, setActiveTab] = useState('Admin');
@@ -25,7 +26,8 @@ const WalletBalance = () => {
                         <div className="flex justify-between border-gray-800">
                             <h2 className="text-gradient mr-8 text-base">Wallet Balances</h2>
                             <div className="flex">
-                                <button
+                                <button 
+
                                     className={`px-4 pb-2 text-sm ${activeTab === 'Admin' ? 'border-b-2 border-teal-400' : 'text-gray-400'}`}
                                     onClick={() => setActiveTab('Admin')}
                                 >
@@ -83,15 +85,15 @@ const WalletBalance = () => {
                 </div>
 
                 {/* Failed Transactions Card */}
-                <div className="bg-[#0E1F30] rounded-xl p-4 flex items-center ">
-                    <div className="bg-red-900/30 p-4 rounded-full mr-4">
-                        <AlertTriangle className="text-red-500" size={24} />
+                <div className="bg-[#0E1F30] rounded-xl px-4 flex items-center ">
+                    <div className="mr-4">
+                        <FailTransactionIcon/>
                     </div>
                     <div className="flex-grow">
                         <h2 className="text-gray-300 mb-1">Failed Transactions</h2>
-                        <div className="text-3xl font-bold text-red-500 ">56</div>
+                        <div className="text-3xl font-bold text-red-500 mt-10">56</div>
                     </div>
-                    <button className="bg-teal-400 hover:bg-teal-500 text-black font-medium rounded-full px-4 py-2 text-sm">
+                    <button className="bg-teal-400 hover:bg-teal-500 mt-16 text-black font-medium rounded-full px-4 py-2 text-sm">
                         Take Action
                     </button>
                 </div>
@@ -99,7 +101,7 @@ const WalletBalance = () => {
                 {/* Alerts Card */}
                 <div className="bg-[#0E1F30] rounded-[20px] p-4 flex items-start">
                     <div className="bg-orange-500/30 p-4 rounded-full mr-4">
-                        <Bell className="text-orange-400" size={24} />
+                        <AlertTransactionIcon />
                     </div>
                     <div className="flex-grow">
                         <div className="flex items-center justify-between mb-2">
@@ -110,8 +112,8 @@ const WalletBalance = () => {
                             </button>
                         </div>
                         <div className="text-xs bg-[#152D44] rounded-xl p-2">
-                            <p className="text-[#00A3FF] pb-2 border-b  border-[#0E1F30]">John Doe has a failure for transaction, please check it out what happened!</p>
-                            <p className="text-[#00A3FF] mt-2">Your balance is low under $10,000. Please deposit to your wallet.</p>
+                            <p className="text-[#00A3FF] pb-2 border-b  border-[#0E1F30]">John Doe has a failure for transaction, please check it out what</p>
+                            <p className="text-[#00A3FF] mt-2">Your balance is low under $10,000. Please deposit to your</p>
 
                         </div>
 

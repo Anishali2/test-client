@@ -3,6 +3,7 @@
 import { ArrowUpDown, Check, CircleChevronLeft, CircleChevronRight, CircleX, SquareCheck, X } from 'lucide-react';
 import { useState } from 'react';
 import TransactionModal from './transaction-modal';
+import { CheckActionIcon, CrosActionIcon } from '@/assets/svgs';
 
 export default function TransactionTable() {
     const [currentPage, setCurrentPage] = useState(1);
@@ -44,13 +45,9 @@ export default function TransactionTable() {
                 );
             case "Decision":
                 return (
-                    <div className="flex space-x-2">
-                        <button className="bg-teal-500 rounded-full p-1.5">
-                            <Check size={16} className="text-black" />
-                        </button>
-                        <button className="bg-red-500 rounded-full p-1.5">
-                            <X size={16} className="text-black" />
-                        </button>
+                    <div className="flex space-x-4">
+                       <CheckActionIcon/>
+                       <CrosActionIcon/>
                     </div>
                 );
             default:

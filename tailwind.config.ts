@@ -14,6 +14,7 @@ const config: Config = {
       xs: "375px",
       tablet: "1000px",
       xxl: "1440px",
+      bgScreen: "1600px",
       maxmobile: { max: "767px" },
       ...defaultTheme.screens,
     },

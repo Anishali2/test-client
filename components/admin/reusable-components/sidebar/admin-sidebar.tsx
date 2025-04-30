@@ -5,8 +5,7 @@ import { usePathname, useRouter } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import clsx from "clsx";
-import toast from "react-hot-toast";
-import axios from "axios";
+
 import { FaCircleUser } from "react-icons/fa6";
 
 import { AdminAppRoutes, AppRoutes } from "@/constants/app-routes";
