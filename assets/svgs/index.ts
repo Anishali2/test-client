@@ -60,5 +60,8 @@ export { default as FailTransactionIcon } from "./fail-transaction-icon.svg";
 export { default as AlertTransactionIcon } from "./alert-transaction-icon.svg";
 export { default as CrosActionIcon } from "./cros-action.svg";
 export { default as CheckActionIcon } from "./check-action.svg";
+export { default as MoneyReciveIcon } from "./money-recive.svg";
+export { default as MoneySendIcon } from "./money-send.svg";
+export { default as ArrowSquareDownIcon } from "./arrow-square-down.svg";
 
 export { default as LeafIcon } from "./leaf.svg";

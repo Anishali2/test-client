@@ -5,14 +5,24 @@ import { usePathname } from "next/navigation";
 import { ChevronRight, Search } from "lucide-react";
 import { CircleChevronLeft, CircleChevronRight } from "lucide-react";
 import { statusData } from "./constant";
+import TransferAmountModal from "./transfer-amount-modal";
 
-const WalletBlance = () => {
+const WalletBalance = () => {
   const [activeTab, setActiveTab] = useState("user");
   const [currentPage, setCurrentPage] = useState(1);
   const [showtable, setShowtable] = useState("user");
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleTable = (value: any) => {
     setShowtable(value);
+  };
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
   };
 
   const pathname = usePathname();
@@ -179,10 +189,12 @@ const WalletBlance = () => {
                         <button
                           className={`items-center rounded-full px-4 py-1 text-center text-xs text-[#05121E] ${status.status === "unlock" ? "bg-gradient-to-r from-[#FFD46E] to-[#FFD46E]" : "bg-gradient-to-r from-[#FF7337] to-[#CE0000]"}`}
                         >
-                          {" "}
                           {status.status === "lock" ? "Lock" : "Unlock"}
                         </button>
-                        <button className="rounded-full  bg-gradient-to-r from-[#00FF94] to-[#00A3FF] px-4 py-1 text-xs text-black">
+                        <button 
+                          onClick={openModal}
+                          className="rounded-full bg-gradient-to-r from-[#00FF94] to-[#00A3FF] px-4 py-1 text-xs text-black"
+                        >
                           Transfer Amount
                         </button>
                       </td>
@@ -216,8 +228,11 @@ const WalletBlance = () => {
           )}
         </main>
       </div>
+
+      {/* Transfer Amount Modal */}
+      <TransferAmountModal isOpen={isModalOpen} onClose={closeModal} />
     </>
   );
 };
 
-export default WalletBlance;
+export default WalletBalance;
