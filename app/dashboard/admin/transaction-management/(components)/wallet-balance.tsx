@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { AlertTriangle, Bell, CircleArrowRight, CircleChevronRight } from 'lucide-react';
 import { AlertTransactionIcon, FailTransactionIcon } from '@/assets/svgs';
+import Link from 'next/link';
 
 const WalletBalance = () => {
     const [activeTab, setActiveTab] = useState('Admin');
@@ -46,10 +47,12 @@ const WalletBalance = () => {
                     <div className="bg-gray-800 rounded-xl  p-4 mb-4 border border-transparent bg-[#152D44] flex flex-col gap-3">
                         <div className="text-sm text-gray-300 mb-1">Available Balance</div>
                         <div className="text-4xl text-teal-400 font-bold">$ 256,250</div>
-
-                        <button className="bg-teal-400  w-fit hover:bg-teal-500 text-black font-medium rounded-full px-6 py-2 text-sm">
+                          <Link href="/dashboard/admin/wallet-balance">
+                          <button className="bg-teal-400  w-fit hover:bg-teal-500 text-black font-medium rounded-full px-6 py-2 text-sm">
                             Manage
                         </button>
+                          </Link>
+                        
                     </div>
 
 

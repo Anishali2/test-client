@@ -4,6 +4,7 @@ import { ArrowUpDown, Check, CircleChevronLeft, CircleChevronRight, CircleX, Squ
 import { useState } from 'react';
 import TransactionModal from './transaction-modal';
 import { CheckActionIcon, CrosActionIcon } from '@/assets/svgs';
+import Link from 'next/link';
 
 export default function TransactionTable() {
     const [currentPage, setCurrentPage] = useState(1);
@@ -46,8 +47,8 @@ export default function TransactionTable() {
             case "Decision":
                 return (
                     <div className="flex space-x-4">
-                       <CheckActionIcon/>
-                       <CrosActionIcon/>
+                        <CheckActionIcon />
+                        <CrosActionIcon />
                     </div>
                 );
             default:
@@ -118,7 +119,13 @@ export default function TransactionTable() {
                                 <td className="py-4 px-6">{transaction.type}</td>
                                 <td className="py-4 px-6">{transaction.date}</td>
                                 <td className={`py-4 px-6 ${getStatusColor(transaction.status)}`}>
-                                    {transaction.status}
+                                    {transaction.status === 'Failed' ? (
+                                        <Link href={`/dashboard/admin/failed-transaction`}>
+                                            <span className="cursor-pointer">{transaction.status}</span>
+                                        </Link>
+                                    ) : (
+                                        transaction.status
+                                    )}
                                 </td>
                                 <td className="py-4 px-6">{transaction.amount}</td>
                                 <td className="py-4 px-6">{transaction.method}</td>
