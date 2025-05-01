@@ -68,7 +68,7 @@ const WalletBlance = () => {
                             {/* Left text */}
                             <div className="flex justify-between w-full text-center items-center">
                                 <h2 className="text-2xl font-semibold">
-                                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-400">
+                                    <span className=" bg-clip-text text-gradient">
                                         Wallet Balance & Management
                                     </span>
                                 </h2>
