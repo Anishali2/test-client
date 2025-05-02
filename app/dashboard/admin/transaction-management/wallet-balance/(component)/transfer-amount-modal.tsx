@@ -108,7 +108,7 @@ const TransferAmountModal: React.FC<TransferAmountModalProps> = ({
                 <div className="mt-6 flex justify-end">
                   <Button
                   title="confirm"
-                  className="rounded-full text-xs"
+                  className="rounded-full"
                   ></Button>
                 </div>
             </div>
